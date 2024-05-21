@@ -1,0 +1,203 @@
+*{
+      font-family: "Poppins", sans-serif;
+}
+
+.bg-primary-custom{
+      background-color: #240750;
+}
+
+.sidebar{
+      color: #ffffff;
+      i{
+            font-size: 8px;
+            /* display: none; */
+            transition: all 0.5s ease-in;
+            color: #240750;
+            position: absolute;
+            z-index: -8;
+      }
+      a{
+            color: #ffffff;
+            text-decoration: none;
+      }
+}
+
+.text-link-sidebar-admin{
+      color: #f0f0f0;
+      font-size: 16px;
+      transition: all 0.5s ease-in;
+}
+
+.sidebar-link:hover{
+      transition: color 1.0s ease;
+      .text-link-sidebar-admin{
+            color: #92d4d0;
+            padding-left: 20px;
+      }
+      i{
+            color: #57A6A1;
+            display: block;
+            font-size: 8px;
+            animation: fadeOut 1.0s;
+      }
+}
+
+.card{
+      border: none!important;
+      border-radius: 10px;
+}
+
+.card-dashboard i{
+      font-size: 20px;
+}
+
+.card-dashboard{
+      transition: all 0.5s ease-in;
+      animation: fadeIn 3.0s;
+}
+
+@keyframes fadeIn {
+      from{
+            filter: opacity(0);
+            transform: translateY(-20px);
+      }
+      to{
+            filter: opacity(100%);
+            transform: translateY(0);
+      }
+}
+
+@keyframes fadeOut {
+      from{
+            filter: opacity(0);
+            transform: translateX(-20px);
+      }
+      to{
+            filter: opacity(100%);
+            transform: translateX(0);
+      }
+}
+
+.card-dashboard:hover{
+      box-shadow: none!important;
+      .box-icon{
+            box-shadow: 0px 10px 15px -3px rgb(0, 0, 0, 0.1);
+            transform: scale(1.1);
+      }
+}
+
+.box-icon{
+      transition: all 0.5s ease-in;
+}
+
+table, th, tr, td{
+      font-size: 12px;
+}
+
+.btn-login:hover{
+      background-image: linear-gradient(120deg, #b465da 0%, #b465da 100%)!important;
+      box-shadow: 0px 10px 15px -3px rgb(0, 0, 0, 0.1);
+}
+
+.btn-login{
+      transition: all 0.5s ease-in;
+      animation: fadeIn 1.0s;
+}
+
+.link-sidebar-wrapp:hover{
+      .sidebar-link-operator{
+            color: #652fb6!important;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 10px 15px -3px rgb(0, 0, 0, 0.1);
+      }
+      svg{
+            fill: #652fb6;
+      }
+      .text-link-sidebar{
+            display: block!important;
+            font-size: 14px;
+      }
+}
+
+.sidebar-link-operator{
+      transition: all 0.5s ease-in;
+}
+
+.sidebar-operator{
+      animation: fadeOut 3.0s;
+}
+
+.text-link-sidebar{
+      transition: all 0.6s ease;
+      font-size: 5px;
+}
+
+.sub-sidebar-operator:hover{
+      width: 150px;
+      height: 100%!important;
+      border-radius: 0!important;
+      .sidebar-operator{
+            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+}
+
+.sub-sidebar-operator{
+      transition: all 0.6s ease;
+      width: 60px;
+}
+
+tr:hover{
+      .edit-icon{
+            color: rgb(54, 54, 54)!important;
+      }
+      .delete-icon{
+            color: rgb(255, 49, 49)!important;
+      }
+}
+
+.btn-action-table{
+      transition: all 0.2s ease-in;
+}
+
+.btn-action-table:hover{
+      background-color: lightgrey;
+      box-shadow: 0px 10px 15px -3px rgb(0, 0, 0, 0.1);
+}
+
+.btn-add-items{
+      outline: 0.5px solid #240750!important;
+      color: #240750!important;
+      font-weight: 500;
+      transition: all 0.4s ease-in-out;
+      i{
+            color: #240750!important;
+      }
+}
+.btn-add-items:hover{
+      outline: none!important;
+      border: none!important;
+      color: #ffffff!important;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+      background-blend-mode: multiply,multiply;
+      font-weight: 500;
+      i{
+            color: #ffffff!important;
+      }
+}
+
+.login-card-right{
+      animation: opacity 3.0s;
+}
+
+@keyframes opacity {
+      from {
+            filter: opacity(0);
+      }
+      to {
+            filter: opacity(100%);
+      }
+}
+
+option:hover{
+      background-color: #a8d7e8;
+}
