@@ -19,7 +19,7 @@
                         </div>
                   </div>
                   <hr>
-                  <div style="font-size: 14px" class="">MENU</div>
+                  <div style="font-size: 13px" class="text-secondary">MENU</div>
                   <div class="ps-4 pt-3">
                         <div>
                               <a href="products" class="">
@@ -43,7 +43,7 @@
                         </div>
                   </div>
                   <hr>
-                  <div style="font-size: 14px" class="">SETTINGS</div>
+                  <div style="font-size: 13px" class="text-secondary">SETTINGS</div>
                   <div class="ps-4 pt-3">
                         <div>
                               <form action="{{ route('logout') }}" method="POST">

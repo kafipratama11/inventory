@@ -1,9 +1,10 @@
-<form action="">
-      <div class="modal fade" id="modalEditPurchase{{ $dtransaction->DtransactionID }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<form action="{{ route('detail.purchase.store.admin') }}" method="POST">
+      @csrf
+      <div class="modal fade" id="modalCreatePurchase{{ $transaction->transactionID }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                         <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="exampleModalLabel">Edit purchase</h1>
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Tambahkan item di transaksi T-{{ $transaction->transactionID }}</h1>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body px-4">
@@ -21,7 +22,7 @@
                                     <div class="col">
                                           <div class="mb-3">
                                                 <label for="exampleFormControlInput1" class="form-label">Jumlah</label>
-                                                <input type="number" value="{{ $dtransaction->amount }}" name="amount" class="form-control" id="exampleFormControlInput1">
+                                                <input type="number" name="amount" class="form-control" id="exampleFormControlInput1">
                                           </div>
                                     </div>
                               </div>

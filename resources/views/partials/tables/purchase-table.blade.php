@@ -35,7 +35,7 @@
                         </div>
                   </td>
             </tr>
-            @include('partials.modals.update.purchase')
+            {{-- @include('partials.modals.update.purchase') --}}
             @endforeach
       </tbody>
 </table>

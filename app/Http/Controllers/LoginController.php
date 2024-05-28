@@ -83,7 +83,7 @@ class LoginController extends Controller
             // Redirect berdasarkan role
             $user = Auth::user();
             if ($user->role->name == 'officer') {
-                return redirect()->intended('/officer/dashboard');
+                return redirect()->intended('/officer/purchase');
             }else{
                 return redirect()->back()->with('failed', 'failed login');
             }

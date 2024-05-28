@@ -1,4 +1,4 @@
-<form action="{{ route('purchase.store') }}" method="POST">
+<form action="{{ route('purchase.store.operator') }}" method="POST">
       @csrf
       <div class="modal fade" id="modalCreateTransaction" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">

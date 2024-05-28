@@ -2,7 +2,7 @@
       <div class="card-body">
             <div class="fw-medium mb-3">Detail transaksi</div>
             @foreach ($transactions as $transaction)
-            @include('partials.modals.create.purchase')
+            @include('partials.modals.create.purchase-detail-operator')
             <div class="collapse py-2 px-1" id="collapseWidthExample{{ $transaction->transactionID }}" style="min-height: 200px">
                   <div class="d-flex align-items-center mb-2">
                         <div class="mb-2" style="font-size: 12px">Transaksi ID : T-{{ $transaction->transactionID }}</div>
@@ -37,7 +37,7 @@
                                     <td>Rp{{ $dtransaction->amount * (optional($dtransaction->product)->price ?? 0) }}</td>
                                     <td>
                                           <div class="d-flex gap-1 align-items-center" style="font-size: 16px;">
-                                                <a href="" data-bs-toggle="modal" data-bs-target="#modalEditPurchase">
+                                                <a href="" data-bs-toggle="modal" data-bs-target="#modalEditPurchase{{ $dtransaction->DtransactionID }}">
                                                       <div class="btn-action-table d-flex justify-content-center align-items-center rounded-circle" style="width: 30px; height: 30px">
                                                             <i class="bi edit-icon bi-pencil-square" style="color: white;"></i>
                                                       </div>
@@ -60,4 +60,9 @@
             </div>
             @endforeach
       </div>
+      {{-- <div class="card shadow-sm position-absolute" style="height: 200px">
+            <div class="card-body">
+                  test
+            </div>
+      </div> --}}
 </div>

@@ -53,7 +53,7 @@
                                                             <i class="bi bi-plus-lg"></i>
                                                       </button>
                                                       <!-- Modal -->
-                                                      @include('partials.modals.create.transaction')
+                                                      @include('partials.modals.create.purchase-operator')
                                                 </div>
                                                 @include('partials.tables.purchase-table')
                                           </div>

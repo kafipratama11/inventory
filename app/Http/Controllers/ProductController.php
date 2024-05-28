@@ -26,4 +26,51 @@ class ProductController extends Controller
         Products::create($request->all());
         return redirect()->back()->with('success', 'Product created successfully.');
     }
+
+    public function update_product(Request $request)
+    {
+        // Validasi data
+        $request->validate([
+            'productID' => 'required|integer|exists:products,productID',
+            'product_name' => 'required|string|max:255',
+            'product_merk' => 'nullable|string|max:255',
+            'price' => 'required|numeric',
+            'qty' => 'required|numeric',
+            'categoryID' => 'required|integer|exists:categories,categoryID'
+        ]);
+
+        // Ambil ID produk dari request
+        $productID = $request->input('productID');
+
+        // Cari produk berdasarkan ID
+        $product = Products::findOrFail($productID);
+
+        // Update produk dengan data dari request
+        $product->update([
+            'product_name' => $request->product_name,
+            'product_merk' => $request->product_merk,
+            'price' => $request->price,
+            'qty' => $request->qty,
+            'categoryID' => $request->categoryID,
+        ]);
+
+        // Redirect kembali dengan pesan sukses
+        return redirect()->back()->with('success', 'Product updated successfully.');
+    }
+
+    public function delete_product(Request $request)
+    {
+        $request->validate([
+            'productID' => 'required|integer|exists:products,productID',
+        ]);
+
+        $productID = $request->input('productID');
+
+        $product = Products::findOrFail($productID);
+
+        $product->delete();
+
+        // Redirect kembali dengan pesan sukses
+        return redirect()->back()->with('success', 'Product deleted successfully.');
+    }
 }

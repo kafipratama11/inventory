@@ -38,30 +38,7 @@
                                                       <button class="btn btn-dark"  data-bs-toggle="modal" data-bs-target="#modalCreateProduct" style="font-size: 14px;">Add product</button>
                                                       @include('partials.modals.create.product')
                                                 </div>
-                                                <table class="table table-hover" id="myTable">
-                                                      <thead>
-                                                            <tr>
-                                                                  <th scope="col">No</th>
-                                                                  <th scope="col">Kode Barang</th>
-                                                                  <th scope="col">Nama Barang</th>
-                                                                  <th scope="col">Jenis Barang</th>
-                                                                  <th scope="col">Jumlah</th>
-                                                                  <th scope="col">Harga</th>
-                                                            </tr>
-                                                      </thead>
-                                                      <tbody>
-                                                            @foreach ($products as $product)
-                                                            <tr>
-                                                                  <th scope="row" class="text-center">{{ $loop->iteration }}</th>
-                                                                  <td>BRG-{{ $product->productID }}</td>
-                                                                  <td>{{ $product->product_name }}</td>
-                                                                  <td>{{ $product->category->category_name }}</td>
-                                                                  <td class="text-center">{{ $product->qty }}</td>
-                                                                  <td>Rp{{ $product->price }}</td>
-                                                            </tr>
-                                                            @endforeach
-                                                      </tbody>
-                                                </table>
+                                                @include('partials.tables.products-table')
                                           </div>
                                     </div>
                               </div>
