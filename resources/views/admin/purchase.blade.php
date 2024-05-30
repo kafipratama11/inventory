@@ -64,7 +64,7 @@
                                                                         <td>Rp{{ $dtransaction->amount * (optional($dtransaction->product)->price ?? 0) }}</td>
                                                                         <td>
                                                                               <div class="d-flex gap-1 align-items-center" style="font-size: 16px;">
-                                                                                    <a href="" data-bs-toggle="modal" data-bs-target="#modalEditPurchase{{ $dtransaction->DtransactionID }}">
+                                                                                    <a href="" data-bs-toggle="modal" data-bs-target="#modalEditDetailPurchase{{ $dtransaction->DtransactionID }}">
                                                                                           <div class="btn-action-table d-flex justify-content-center align-items-center rounded-circle" style="width: 30px; height: 30px">
                                                                                                 <i class="bi edit-icon bi-pencil-square" style="color: white;"></i>
                                                                                           </div>

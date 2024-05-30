@@ -1,5 +1,5 @@
 <form action="">
-      <div class="modal fade" id="modalEditPurchase{{ $dtransaction->DtransactionID }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="modalEditDetailPurchase{{ $dtransaction->DtransactionID }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                         <div class="modal-header">

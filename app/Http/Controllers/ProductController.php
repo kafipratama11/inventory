@@ -27,7 +27,7 @@ class ProductController extends Controller
         return redirect()->back()->with('success', 'Product created successfully.');
     }
 
-    public function update_product(Request $request)
+    public function update_product(Request $request,$productID)
     {
         // Validasi data
         $request->validate([
@@ -39,20 +39,31 @@ class ProductController extends Controller
             'categoryID' => 'required|integer|exists:categories,categoryID'
         ]);
 
-        // Ambil ID produk dari request
-        $productID = $request->input('productID');
 
-        // Cari produk berdasarkan ID
-        $product = Products::findOrFail($productID);
-
-        // Update produk dengan data dari request
-        $product->update([
+        $data = ([
             'product_name' => $request->product_name,
             'product_merk' => $request->product_merk,
             'price' => $request->price,
             'qty' => $request->qty,
             'categoryID' => $request->categoryID,
         ]);
+
+        Products::where('productID',$productID)->update($data);
+
+        // Ambil ID produk dari request
+        // $productID = $request->input('productID');
+
+        // // Cari produk berdasarkan ID
+        // $product = Products::findOrFail($productID);
+
+        // // Update produk dengan data dari request
+        // $product->update([
+        //     'product_name' => $request->product_name,
+        //     'product_merk' => $request->product_merk,
+        //     'price' => $request->price,
+        //     'qty' => $request->qty,
+        //     'categoryID' => $request->categoryID,
+        // ]);
 
         // Redirect kembali dengan pesan sukses
         return redirect()->back()->with('success', 'Product updated successfully.');

@@ -38,4 +38,21 @@ class PurchaseController extends Controller
 
         return redirect()->back()->with('success', 'item berhasil ditambahkan.');
     }
+
+    public function update_detail_transaction(Request $request, $DtransactionID){
+        $request->validate([
+            'DtransactionID' => 'required|integer',
+            'productID' => 'required|integer',
+            'amount' => 'required|integer',
+        ]);
+
+        $data = ([
+            'productID' => $request->productID,
+            'amount' => $request->amount,
+        ]);
+
+        detail_transaction::where('DtransactionID', $DtransactionID)->update($data);
+
+        return redirect()->back()->with('success', 'Product updated successfully.');
+    }
 }

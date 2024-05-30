@@ -36,7 +36,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     
     Route::post('/update-purchase', [PurchaseController::class, 'update_detail_transaction'])->name('detail.purchase.update');
     
-    Route::post('/update-product', [ProductController::class, 'update_product'])->name('product.update');
+    Route::put('/update-product/{productID}', [ProductController::class, 'update_product'])->name('product.update');
+    Route::put('/update-detail-transaction/{DtransactionID}', [PurchaseController::class, 'update_detail_transaction'])->name('detail.transaction.update');
     Route::delete('/delete-product', [ProductController::class, 'delete_product'])->name('product.delete');
 });
 
